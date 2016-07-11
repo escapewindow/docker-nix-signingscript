@@ -7,7 +7,7 @@ RUN useradd -U -d /home/nixbld -s /bin/bash -m nixbld
 
 RUN mkdir -m 0755 /nix && chown nixbld /nix
 COPY nix-1.11.2-x86_64-linux.tar.bz2 /nix
-RUN cd /nix && tar xjf nix-1.11.2-x86_64-linux.tar.bz2 && su -c nix-1.11.2-x86_64-linux/install nixbld
+RUN cd /nix && tar xjf nix-1.11.2-x86_64-linux.tar.bz2 && su -c nix-1.11.2-x86_64-linux/install nixbld && rm -rf /nix/nix-1.11.2-x86_64-linux*
 RUN su -l -c "nix-channel --update" nixbld
 
 ENV     HOME       /home/nixbld
