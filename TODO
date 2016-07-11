@@ -1,0 +1,47 @@
+# install git
+# nix-env -iA nixpkgs.git
+# clone git
+# checkout nix branch
+# nix-build
+
+# but ideally, host has nix, mount /nix
+#   0 nix-env --version
+#   1 nix-env -q --installed
+#   2 nix-channel --list
+#   3 nix-channel update
+#   4 nix-channel --update
+#   5 nix-env -u \*
+#   6 nix-env --version
+#   7 nix-channel --list
+#   8 nix-env -q --installed
+#   9 nix-env -iA nixpkgs.git
+#  10 git clone https://github.com/escapewindow/signingscript.git
+#  11 cd signingscript/
+#  12 git checkout nix
+#  13 ls
+#  14 nix-build
+#  15 ls
+#  16 ls result/bin
+#  17 result/bin/signingscript
+#  18 ls
+#  19 nix-env -iA nixpkgs.neovim
+#  20 git pull
+#  21 which vi
+#  22 ls
+#  23 which vim
+#  24 which nvim
+#  25 nvim release.nix
+#  26 which python
+#  27 python --version
+#  28 nix-build release.nix -A docker
+#  29 vi release.nix
+#  30 !vi
+#  31 vi release.nix
+#  32 nix-build release.nix -A docker
+#  33 vi release.nix
+#  34 !vi
+#  35 vi release.nix
+#  36 nix-build release.nix -A docker
+#  37 df -h
+#  38 history
+
